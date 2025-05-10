@@ -4,9 +4,10 @@ import cors from "cors";
 import session from "cookie-session";
 import { config } from "./config/app.config";
 import connectDatabase from "./config/database.config";
-import { errorHandler } from "./middlewares/error.middleware";
+import { errorHandler } from "./middlewares/errorHandler.middleware";
 import { HTTPSTATUS } from "./config/http.config";
 import { asyncHandler } from "./middlewares/asyncHandler.middleware";
+import { BadRequestException } from "./utils/appError";
 
 const app = express();
 const BASE_PATH = config.BASE_PATH;
@@ -42,6 +43,7 @@ app.get(
   })
 );
 
+// error handler middleware imported from middlewares/errorHandler.middleware.ts
 app.use(errorHandler);
 
 app.listen(config.PORT, async () => {
