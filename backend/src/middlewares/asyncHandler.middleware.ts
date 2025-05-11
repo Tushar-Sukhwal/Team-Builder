@@ -17,7 +17,7 @@ export const asyncHandler =
   };
 
 // this file is made so that in every request you dont need to call next(error) in each request;
-// earlier you needed to do
+// earlier you needed to 
 /* 
 app.get("/", async (req: Request, res: Response, next: NextFunction) => {
   try {
