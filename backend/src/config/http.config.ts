@@ -1,5 +1,10 @@
 //This makes it easy to reference HTTP status codes by name instead of remembering numbers
 
+/**
+ * HTTP status codes configuration.
+ * This object provides named constants for common HTTP status codes,
+ * making it easier to reference them in the application.
+ */
 const httpConfig = () => ({
   // Success responses
   OK: 200,

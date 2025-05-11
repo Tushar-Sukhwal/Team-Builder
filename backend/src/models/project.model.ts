@@ -1,15 +1,21 @@
 import mongoose, { Document, Schema } from "mongoose";
 
+/**
+ * Interface representing a Project document in MongoDB.
+ */
 export interface ProjectDocument extends Document {
-  name: string;
-  description: string | null;
-  emoji: string;
-  workspace: mongoose.Types.ObjectId;
-  createdBy: mongoose.Types.ObjectId;
-  createdAt: string;
-  updatedAt: string;
+  name: string; // Name of the project
+  description: string | null; // Description of the project
+  emoji: string; // Emoji representing the project
+  workspace: mongoose.Types.ObjectId; // Reference to the associated workspace
+  createdBy: mongoose.Types.ObjectId; // Reference to the user who created the project
+  createdAt: string; // Timestamp of when the project was created
+  updatedAt: string; // Timestamp of when the project was last updated
 }
 
+/**
+ * Mongoose schema for the Project model.
+ */
 const projectSchema = new Schema<ProjectDocument>(
   {
     name: { type: String, required: true, trim: true },
@@ -32,5 +38,4 @@ const projectSchema = new Schema<ProjectDocument>(
 );
 
 const ProjectModel = mongoose.model<ProjectDocument>("Project", projectSchema);
-
 export default ProjectModel;

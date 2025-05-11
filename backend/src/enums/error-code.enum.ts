@@ -1,3 +1,7 @@
+/**
+ * Enumeration for error codes used in the application.
+ * This enum provides a set of predefined error codes for various authentication and validation errors.
+ */
 export const ErrorCodeEnum = {
   AUTH_EMAIL_ALREADY_EXISTS: "AUTH_EMAIL_ALREADY_EXISTS",
   AUTH_INVALID_TOKEN: "AUTH_INVALID_TOKEN",

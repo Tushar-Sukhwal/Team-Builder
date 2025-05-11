@@ -1,10 +1,14 @@
+/**
+ * Enumeration for user roles and permissions in the application.
+ * This enum defines the roles available and their associated permissions.
+ */
 export const Roles = {
   OWNER: "OWNER",
   ADMIN: "ADMIN",
   MEMBER: "MEMBER",
 } as const;
 
-export type RoleType = keyof typeof Roles;
+export type RoleType = keyof typeof Roles; // Type for role keys
 
 export const Permissions = {
   CREATE_WORKSPACE: "CREATE_WORKSPACE",
@@ -27,4 +31,4 @@ export const Permissions = {
   VIEW_ONLY: "VIEW_ONLY",
 } as const;
 
-export type PermissionType = keyof typeof Permissions;
+export type PermissionType = keyof typeof Permissions; // Type for permission keys

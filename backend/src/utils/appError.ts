@@ -1,10 +1,13 @@
 import { HTTPSTATUS, HttpStatusCodeType } from "../config/http.config";
 import { ErrorCodeEnum, ErrorCodeEnumType } from "../enums/error-code.enum";
 
-//custom error class that inherits from JavaScript's built-in Error class
+/**
+ * Custom error class that extends the built-in Error class.
+ * This class is used to create application-specific errors with a status code and error code.
+ */
 export class AppError extends Error {
-  public statusCode: HttpStatusCodeType;
-  public errorCode?: ErrorCodeEnumType;
+  public statusCode: HttpStatusCodeType; // HTTP status code
+  public errorCode?: ErrorCodeEnumType; // Optional application-specific error code
 
   constructor(
     message: string,

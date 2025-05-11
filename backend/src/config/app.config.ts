@@ -1,5 +1,22 @@
 import { getEnv } from "../utils/get-env";
 
+/**
+ * Application configuration settings.
+ * This function retrieves environment variables and provides default values.
+ *
+ * @returns {Object} Configuration object containing:
+ * - NODE_ENV: The environment the app is running in (development, production, etc.)
+ * - PORT: The port on which the server will listen.
+ * - BASE_PATH: The base API path for the application.
+ * - MONGO_URI: The MongoDB connection URI.
+ * - SESSION_SECRET: Secret key for session management.
+ * - SESSION_EXPIRES_IN: Duration for session expiration.
+ * - GOOGLE_CLIENT_ID: Google OAuth client ID.
+ * - GOOGLE_CLIENT_SECRET: Google OAuth client secret.
+ * - GOOGLE_CALLBACK_URL: URL for Google OAuth callback.
+ * - FRONTEND_ORIGIN: Allowed origin for CORS.
+ * - FRONTEND_GOOGLE_CALLBACK_URL: Callback URL for frontend Google OAuth.
+ */
 const appConfig = () => ({
   NODE_ENV: getEnv("NODE_ENV", "development"),
   PORT: getEnv("PORT", "5000"),

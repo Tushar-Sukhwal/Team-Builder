@@ -1,3 +1,7 @@
+/**
+ * Enumeration for task statuses and priorities.
+ * This enum defines the possible statuses and priorities for tasks in the application.
+ */
 export const TaskStatusEnum = {
   BACKLOG: "BACKLOG",
   TODO: "TODO",
@@ -12,5 +16,5 @@ export const TaskPriorityEnum = {
   HIGH: "HIGH",
 } as const;
 
-export type TaskStatusEnumType = keyof typeof TaskStatusEnum;
-export type TaskPriorityEnumType = keyof typeof TaskPriorityEnum;
+export type TaskStatusEnumType = keyof typeof TaskStatusEnum; // Type for task status keys
+export type TaskPriorityEnumType = keyof typeof TaskPriorityEnum; // Type for task priority keys

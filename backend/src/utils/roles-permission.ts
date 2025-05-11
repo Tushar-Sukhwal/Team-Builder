@@ -5,6 +5,10 @@ import {
   RoleType,
 } from "../enums/role.enum";
 
+/**
+ * Defines the permissions associated with each role in the application.
+ * This object maps roles to their respective permissions.
+ */
 export const RolePermissions: Record<RoleType, Array<PermissionType>> = {
   OWNER: [
     Permissions.CREATE_WORKSPACE,
