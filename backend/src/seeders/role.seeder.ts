@@ -63,3 +63,23 @@ const seedRoles = async () => {
 seedRoles().catch((error) =>
   console.error("Error running the seed script", error)
 );
+
+// Note:- transactions in mongodb are only allowed on a replica set member
+// so if you are running this on a single node, you will get an error
+// if you are running mongo db locally, you can use the following command to start the replica set
+// mongod --replSet rs0
+// then you can use the following command to start the mongos
+// mongos --configsvr --replSet rs0
+// then you can use the following command to add the nodes to the replica set
+// rs.initiate()
+// rs.add("mongodb://localhost:27017")
+
+// then you can use the following command to check the status of the replica set
+// rs.status()
+
+// then you can use the following command to add the nodes to the replica set
+// rs.add("mongodb://localhost:27017")
+
+// then you can use the following command to check the status of the replica set
+// rs.status()
+
